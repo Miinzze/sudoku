@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
-        Fully offline app: intentionally no INTERNET / ACCESS_NETWORK_STATE permission and no
-        network code anywhere in the app module. Do not add one.
+        Offline-first app. The single deliberate exception is the manual, opt-in "Nach Updates
+        suchen" action in Settings (see data/update/UpdateChecker.kt), which queries the GitHub
+        Releases API only when the user explicitly taps that button — never automatically, never
+        on startup. No other network code exists anywhere in the app module.
     -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".SudokuAiApplication"

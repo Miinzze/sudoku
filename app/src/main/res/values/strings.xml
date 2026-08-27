@@ -124,6 +124,16 @@
     <string name="settings_feedback">Feedback</string>
     <string name="settings_sound">Sound</string>
     <string name="settings_vibration">Vibration</string>
+    <string name="settings_updates">Updates</string>
+    <string name="settings_current_version">Installierte Version: %1$s</string>
+    <string name="settings_check_updates">Nach Updates suchen</string>
+    <string name="settings_update_available_title">Update verfügbar (v%1$s)</string>
+    <string name="settings_update_available_message">Eine neue Version ist verfügbar.</string>
+    <string name="settings_update_download">Herunterladen</string>
+    <string name="settings_update_later">Später</string>
+    <string name="settings_update_up_to_date_title">Du bist auf dem neuesten Stand</string>
+    <string name="settings_update_up_to_date_message">Es ist keine neue Version verfügbar.</string>
+    <string name="settings_update_error_title">Update-Prüfung fehlgeschlagen</string>
 
     <!-- Common -->
     <string name="common_favorite">Favorit</string>

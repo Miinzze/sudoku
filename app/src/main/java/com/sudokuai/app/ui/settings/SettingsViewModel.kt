@@ -5,11 +5,24 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.sudokuai.app.data.datastore.AppTheme
 import com.sudokuai.app.data.datastore.SettingsDataStore
+import com.sudokuai.app.data.update.UpdateCheckResult
+import com.sudokuai.app.data.update.UpdateChecker
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+/** Distinguishes "no check run yet" from "check in progress" for [SettingsViewModel.updateState]. */
+sealed class UpdateUiState {
+    object Idle : UpdateUiState()
+    object Checking : UpdateUiState()
+    data class Result(val result: UpdateCheckResult) : UpdateUiState()
+}
 
 data class SettingsUiState(
     val theme: AppTheme = AppTheme.SYSTEM,
@@ -78,6 +91,27 @@ class SettingsViewModel(private val settingsDataStore: SettingsDataStore) : View
 
     fun onAutoRemoveCandidatesToggled(enabled: Boolean) {
         viewModelScope.launch { settingsDataStore.setAutoRemoveCandidates(enabled) }
+    }
+
+    // --- Manual, opt-in update check (see UpdateChecker's kdoc for why this is the app's one
+    // deliberate exception to being offline). --------------------------------------------------
+
+    private val _updateState = MutableStateFlow<UpdateUiState>(UpdateUiState.Idle)
+    val updateState: StateFlow<UpdateUiState> = _updateState.asStateFlow()
+
+    fun checkForUpdates(currentVersionName: String) {
+        if (_updateState.value == UpdateUiState.Checking) return
+        viewModelScope.launch {
+            _updateState.value = UpdateUiState.Checking
+            val result = withContext(Dispatchers.IO) {
+                UpdateChecker.checkForUpdate(currentVersionName)
+            }
+            _updateState.value = UpdateUiState.Result(result)
+        }
+    }
+
+    fun onUpdateResultDismissed() {
+        _updateState.value = UpdateUiState.Idle
     }
 
     class Factory(private val settingsDataStore: SettingsDataStore) : ViewModelProvider.Factory {
