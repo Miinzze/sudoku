@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Minimal XML "bootstrap" theme, only visible for the instant between process start and
+        Compose taking over (see MainActivity + ui/theme/Theme.kt for the real Material 3 theme,
+        colors, dark mode and dynamic color handling). Deliberately does not depend on the
+        classic com.google.android.material library — this app is Compose-only.
+    -->
+    <style name="Theme.SudokuAi" parent="android:Theme.DeviceDefault.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/window_background_light</item>
+        <item name="android:statusBarColor">@color/window_background_light</item>
+        <item name="android:navigationBarColor">@color/window_background_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Only used by the classic XML theme (window background / status bar) while the app is
+         starting up, before Compose (ui/theme/Theme.kt) takes over all in-app theming. -->
+    <color name="window_background_light">#FFFBF8FD</color>
+    <color name="window_background_dark">#FF141218</color>
+</resources>

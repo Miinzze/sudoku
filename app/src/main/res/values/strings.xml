@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sudoku AI</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Spielen</string>
+    <string name="nav_library">Meine Sudokus</string>
+    <string name="nav_statistics">Statistik</string>
+    <string name="nav_settings">Einstellungen</string>
+
+    <!-- Home -->
+    <string name="home_title">Sudoku AI</string>
+    <string name="home_new_sudoku">Neues Sudoku</string>
+    <string name="home_continue_game">Letztes Spiel fortsetzen</string>
+    <string name="home_choose_difficulty">Schwierigkeit wählen</string>
+    <string name="home_custom_puzzle">Eigenes Sudoku erstellen</string>
+    <string name="home_resume_title">Spiel fortsetzen?</string>
+    <string name="home_resume_message">Möchtest du dein letztes Spiel fortsetzen?</string>
+    <string name="home_resume_continue">Fortsetzen</string>
+    <string name="home_resume_new">Neues Sudoku</string>
+    <string name="home_generating">Sudoku wird erstellt…</string>
+
+    <!-- Difficulty -->
+    <string name="difficulty_leicht">Leicht</string>
+    <string name="difficulty_mittel">Mittel</string>
+    <string name="difficulty_schwer">Schwer</string>
+    <string name="difficulty_experte">Experte</string>
+    <string name="difficulty_monster">Monster</string>
+
+    <!-- Game -->
+    <string name="game_notes">Notizen</string>
+    <string name="game_erase">Löschen</string>
+    <string name="game_solve">Lösung</string>
+    <string name="game_undo">Rückgängig</string>
+    <string name="game_pause">Pause</string>
+    <string name="game_solve_dialog_title">Lösung anzeigen</string>
+    <string name="game_solve_one_cell">Ein Feld lösen</string>
+    <string name="game_solve_all">Komplettes Sudoku lösen</string>
+    <string name="game_cancel">Abbrechen</string>
+    <string name="game_solve_all_confirm_title">Sudoku wirklich lösen?</string>
+    <string name="game_solve_all_confirm_message">Wenn du das komplette Sudoku lösen lässt, zählt dieses Spiel nicht als selbst gelöst. Möchtest du fortfahren?</string>
+    <string name="game_solved_title">Geschafft!</string>
+    <string name="game_solved_message">Du hast dieses Sudoku in %1$s gelöst.</string>
+    <string name="game_back_to_home">Zurück zur Startseite</string>
+    <string name="game_ok">OK</string>
+    <string name="game_save_limit_reached">Du hast das Limit von 100 gespeicherten Sudokus erreicht. Bitte lösche zuerst ein gespeichertes Spiel.</string>
+
+    <!-- Library -->
+    <string name="library_title">Meine Sudokus</string>
+    <string name="library_empty">Noch keine gespeicherten Sudokus vorhanden.</string>
+    <string name="library_filter_all">Alle</string>
+    <string name="library_favorites_only">Nur Favoriten</string>
+    <string name="library_sort_newest">Neueste zuerst</string>
+    <string name="library_sort_oldest">Älteste zuerst</string>
+    <string name="library_sort_difficulty">Schwierigkeit</string>
+    <string name="library_sort_playtime">Spielzeit</string>
+    <string name="library_delete_title">Sudoku löschen?</string>
+    <string name="library_delete_message">Dieses Sudoku wird endgültig gelöscht.</string>
+    <string name="library_delete_confirm">Löschen</string>
+    <string name="library_status_solved">Gelöst</string>
+    <string name="library_status_revealed">Lösung angezeigt</string>
+    <string name="library_status_in_progress">In Bearbeitung</string>
+    <string name="library_status_custom">Eigenes Sudoku</string>
+
+    <!-- Editor -->
+    <string name="editor_title">Sudoku-Editor</string>
+    <string name="editor_validate">Validieren</string>
+    <string name="editor_clear">Alles löschen</string>
+    <string name="editor_save">Speichern</string>
+    <string name="editor_play">Spielen</string>
+    <string name="editor_valid_title">Gültiges Sudoku</string>
+    <string name="editor_valid_message">Dieses Sudoku hat genau eine Lösung und kann gespeichert werden.</string>
+    <string name="editor_no_solution_title">Keine Lösung</string>
+    <string name="editor_no_solution_message">Dieses Sudoku hat keine gültige Lösung.</string>
+    <string name="editor_multiple_solutions_title">Mehrere Lösungen</string>
+    <string name="editor_multiple_solutions_message">Dieses Sudoku hat mehrere Lösungen. Ein gültiges Sudoku muss genau eine Lösung haben.</string>
+
+    <!-- Statistics -->
+    <string name="statistics_title">Statistik</string>
+    <string name="statistics_solved_count">Gelöste Sudokus</string>
+    <string name="statistics_played_count">Gespielte Sudokus</string>
+    <string name="statistics_best_time">Beste Zeit</string>
+    <string name="statistics_average_time">Durchschnittliche Zeit</string>
+    <string name="statistics_monster_solved">Gelöste Monster-Sudokus</string>
+    <string name="statistics_streak">Längste Serie (Tage)</string>
+    <string name="statistics_by_difficulty">Nach Schwierigkeit</string>
+    <string name="statistics_achievements">Erfolge</string>
+    <string name="statistics_no_data">Noch keine Statistikdaten vorhanden.</string>
+
+    <!-- Achievements -->
+    <string name="achievement_first_sudoku">Erstes Sudoku</string>
+    <string name="achievement_first_sudoku_desc">Löse dein erstes Sudoku.</string>
+    <string name="achievement_10_solved">10 gelöst</string>
+    <string name="achievement_10_solved_desc">Löse 10 Sudokus.</string>
+    <string name="achievement_50_solved">50 gelöst</string>
+    <string name="achievement_50_solved_desc">Löse 50 Sudokus.</string>
+    <string name="achievement_100_solved">100 gelöst</string>
+    <string name="achievement_100_solved_desc">Löse 100 Sudokus.</string>
+    <string name="achievement_first_monster">Erstes Monster-Sudoku</string>
+    <string name="achievement_first_monster_desc">Löse dein erstes Monster-Sudoku.</string>
+    <string name="achievement_10_monster">10 Monster-Sudokus</string>
+    <string name="achievement_10_monster_desc">Löse 10 Monster-Sudokus.</string>
+    <string name="achievement_fast_solve">Schnelle Lösung</string>
+    <string name="achievement_fast_solve_desc">Löse ein Sudoku in unter 3 Minuten.</string>
+    <string name="achievement_custom_creator">Eigenersteller</string>
+    <string name="achievement_custom_creator_desc">Erstelle dein erstes eigenes Sudoku.</string>
+    <string name="achievement_collector">Sammler</string>
+    <string name="achievement_collector_desc">Speichere 20 Sudokus.</string>
+    <string name="achievement_streak_7">7 Tage Serie</string>
+    <string name="achievement_streak_7_desc">Löse an 7 aufeinanderfolgenden Tagen mindestens ein Sudoku.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_appearance">Darstellung</string>
+    <string name="settings_theme">Design</string>
+    <string name="settings_theme_light">Hell</string>
+    <string name="settings_theme_dark">Dunkel</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_gameplay">Spielhilfen</string>
+    <string name="settings_mistake_highlighting">Fehler automatisch markieren</string>
+    <string name="settings_same_number_highlight">Gleiche Zahlen hervorheben</string>
+    <string name="settings_row_col_highlight">Zeile und Spalte hervorheben</string>
+    <string name="settings_auto_remove_candidates">Kandidaten automatisch entfernen</string>
+    <string name="settings_feedback">Feedback</string>
+    <string name="settings_sound">Sound</string>
+    <string name="settings_vibration">Vibration</string>
+
+    <!-- Common -->
+    <string name="common_favorite">Favorit</string>
+    <string name="common_unfavorite">Favorit entfernen</string>
+    <string name="common_delete">Löschen</string>
+    <string name="common_close">Schließen</string>
+    <string name="common_yes">Ja</string>
+    <string name="common_no">Nein</string>
+</resources>
