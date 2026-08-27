@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -57,6 +58,9 @@ fun SudokuBoard(
     Column(
         modifier = modifier
             .fillMaxWidth()
+            // Cap the board's size so it stays readable and leaves room for the number pad below
+            // on wide screens (tablets) instead of growing to the full screen width.
+            .widthIn(max = 480.dp)
             .aspectRatio(1f)
             .border(2.dp, MaterialTheme.colorScheme.outline)
             .drawBehind { drawBoxLines(size.width, size.height, boxLineColor) },
