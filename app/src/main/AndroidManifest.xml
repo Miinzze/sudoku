@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Offline-first app. The single deliberate exception is the manual, opt-in "Nach Updates
+        suchen" action in Settings (see data/update/UpdateChecker.kt), which queries the GitHub
+        Releases API only when the user explicitly taps that button — never automatically, never
+        on startup. No other network code exists anywhere in the app module.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".SudokuAiApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SudokuAi">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SudokuAi"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
