@@ -29,6 +29,12 @@ class Grid private constructor(private val cells: IntArray) {
         return Grid(copy)
     }
 
+    fun withSet(index: Int, value: Int): Grid {
+        val copy = cells.copyOf()
+        copy[index] = value
+        return Grid(copy)
+    }
+
     fun set(row: Int, col: Int, value: Int) {
         cells[index(row, col)] = value
     }

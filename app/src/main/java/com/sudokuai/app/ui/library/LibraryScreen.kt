@@ -1,5 +1,6 @@
 package com.sudokuai.app.ui.library
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -167,7 +168,7 @@ private fun GameListItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(12.dp)
-                .clickableSafe(onOpen),
+                .clickable(onClick = onOpen),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
         ) {
@@ -205,6 +206,3 @@ private fun statusLabel(game: GameState): String = when {
     game.isCustom -> stringResource(R.string.library_status_custom)
     else -> stringResource(R.string.library_status_in_progress)
 }
-
-private fun Modifier.clickableSafe(onClick: () -> Unit): Modifier =
-    this.then(androidx.compose.foundation.clickable(onClick = onClick))

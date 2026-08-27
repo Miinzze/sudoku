@@ -11,6 +11,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import com.sudokuai.app.data.datastore.AppTheme
 
+// Small local aliases so the color-scheme tables below read without repeating
+// androidx.compose.ui.graphics.Color. Must be declared before LightColors/DarkColors since
+// Kotlin top-level properties initialize in declaration order.
+private val Color_White = androidx.compose.ui.graphics.Color.White
+private val Color_Black = androidx.compose.ui.graphics.Color.Black
+
 private val LightColors = lightColorScheme(
     primary = Blue40,
     onPrimary = Color_White,
@@ -94,7 +100,3 @@ fun SudokuAiTheme(
         content = content,
     )
 }
-
-// Small local aliases so the color-scheme tables above read without repeating androidx.compose.ui.graphics.Color.
-private val Color_White = androidx.compose.ui.graphics.Color.White
-private val Color_Black = androidx.compose.ui.graphics.Color.Black
